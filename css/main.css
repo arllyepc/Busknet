@@ -30,15 +30,57 @@ button {
   margin: 0 auto;
 }
 
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+.bg-img {
+  z-index: -1;
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: url(../img/logo-bg.png) bottom left no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 101, 20, 0)), to(#ff6514));
+  background: url(../img/logo-bg.png) bottom left no-repeat, linear-gradient(180deg, rgba(255, 101, 20, 0) 0%, #ff6514 100%);
+}
+@media (max-width: 850px) {
+  .bg-img {
+    height: 100%;
+  }
+}
+
+.container {
+  z-index: 1;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.container .logo-topo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 9.9rem;
+  margin-bottom: 3.2rem;
+}
+.container .logo-topo img {
+  width: 15.2rem;
+  height: 9.9rem;
+}
 .container h1 {
   font-weight: 700;
   font-size: 4.4rem;
   line-height: 100%;
-  /* or 44px */
   text-align: center;
   letter-spacing: -0.02em;
-  /* Neutras/Preto */
   color: #222121;
+  margin-bottom: 4rem;
 }
 .container h2 {
   font-family: "Gantari";
@@ -46,12 +88,11 @@ button {
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 130%;
-  /* or 31px */
   text-align: center;
-  /* Neutras/Preto */
   color: #222121;
 }
 .container .card-prices {
+  margin-top: 3.2rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,6 +140,12 @@ button {
   background: #ffcdb3;
   border-radius: 3.2rem;
 }
+.container .card-prices .card-prices__coverage p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #7e320a;
+}
 .container .card-prices .card-prices__settings {
   width: 100%;
   display: -webkit-box;
@@ -114,4 +161,108 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+.container .card-prices .card-prices__settings .card-prices__item2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 2.2rem;
+}
+.container .card-prices .card-prices__settings .card-prices__item2 .item2__description {
+  text-align: center;
+}
+.container .card-prices .card-prices__settings .card-prices__item2 .item2__description h4 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin-bottom: 0.7rem;
+}
+.container .card-prices .card-prices__settings .card-prices__item2 .item2__description p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #000000;
+}
+.container .card-prices .card-prices__benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+@media (max-width: 850px) {
+  .container .card-prices .card-prices__benefits {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.container .card-prices .card-prices__benefits .benefits__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1.6rem;
+  border: solid 1px #ff6514;
+  color: #ff6514;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+@media (max-width: 850px) {
+  .container .card-prices .card-prices__benefits .benefits__item {
+    max-width: 30rem;
+    width: 100%;
+  }
+}
+.container .card-prices .card-prices__button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.6rem 3.8rem;
+  gap: 1rem;
+  background: #ff6514;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  display: flex;
+  color: #fcfcfc;
+}
+.container .card-prices .card-prices__button a:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
 }
