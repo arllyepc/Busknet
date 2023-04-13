@@ -107,7 +107,6 @@ body {
   padding: 3.2rem 5.6rem;
   gap: 2.4rem;
   background: #fcfcfc;
-  /* Sombra */
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
@@ -162,6 +161,15 @@ body {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 560px) {
+  .container .card-prices .card-prices__settings {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+}
 .container .card-prices .card-prices__settings .card-prices__item2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,6 +194,44 @@ body {
   margin-bottom: 0.7rem;
 }
 .container .card-prices .card-prices__settings .card-prices__item2 .item2__description p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #000000;
+}
+.container .card-prices .card-prices__settings .card-prices__item3 {
+  text-align: center;
+}
+.container .card-prices .card-prices__settings .card-prices__item3 p:first-child {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+}
+.container .card-prices .card-prices__settings .card-prices__item3 p:nth-child(2) {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 100%;
+  color: #000000;
+  position: relative;
+}
+.container .card-prices .card-prices__settings .card-prices__item3 p:nth-child(2) span:first-child {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+}
+.container .card-prices .card-prices__settings .card-prices__item3 p:nth-child(2) span:last-child {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  color: #000000;
+  position: absolute;
+  top: 0;
+}
+.container .card-prices .card-prices__settings .card-prices__item3 p:last-child {
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;

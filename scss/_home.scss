@@ -38,10 +38,8 @@ body {
     font-weight: 700;
     font-size: 4.4rem;
     line-height: 100%;
-
     text-align: center;
     letter-spacing: -0.02em;
-
     color: #222121;
     margin-bottom: 4rem;
   }
@@ -52,9 +50,7 @@ body {
     font-weight: 400;
     font-size: 2.4rem;
     line-height: 130%;
-
     text-align: center;
-
     color: #222121;
   }
 
@@ -66,10 +62,7 @@ body {
     align-items: center;
     padding: 3.2rem 5.6rem;
     gap: 2.4rem;
-
     background: #fcfcfc;
-    /* Sombra */
-
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
 
@@ -112,6 +105,10 @@ body {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      @media (max-width: 560px) {
+        flex-direction: column;
+        gap: 2.4rem;
+      }
 
       .card-prices__item2 {
         display: flex;
@@ -133,6 +130,58 @@ body {
           }
 
           p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+
+            color: #000000;
+          }
+        }
+      }
+
+      .card-prices__item3 {
+        text-align: center;
+        p {
+          &:first-child {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+
+            color: #000000;
+          }
+
+          &:nth-child(2) {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 55px;
+            line-height: 100%;
+
+            color: #000000;
+            position: relative;
+
+            span {
+              &:first-child {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 100%;
+
+                color: #000000;
+              }
+
+              &:last-child {
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 100%;
+
+                color: #000000;
+                position: absolute;
+                top: 0;
+              }
+            }
+          }
+
+          &:last-child {
             font-weight: 400;
             font-size: 12px;
             line-height: 100%;
